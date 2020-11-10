@@ -2,21 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <meta charset="utf-8">
 <head th:replace="layouts/NewFile :: head">
+  <link rel="stylesheet" href="/Alquilerprogramacion4/src/main/resources/static/css/stilo1.css">
+
     <title>Perfil Administrador</title>
 </head>
 <body>
     <header class="encabezado">
         <div class="img">
-            <img src="img/man.png" height="80" width="80">
+            <img src="/img/man.png" height="80" width="80">
         </div>
        <h4>Administrador</h4>
-       <div sec:authorize="isAuthenticated()">Bienvenido al sistema. <a href="/menu">Salir del sistema</a> </div>
+       <div sec:authorize="isAuthenticated()"></div>
         <nav >
             <ul class="funciones">
             <li><a  onclick="lista()">Inico</a></li>
                 <li><a onclick="vehiculo()">Agregar vehiculo</a></li>
                 <li><a onclick="admin()">Agregar Administrador</a></li>
-
+              <li><a href="/menu">Salir del sistema</a></li>
             </ul>
             
         </nav>

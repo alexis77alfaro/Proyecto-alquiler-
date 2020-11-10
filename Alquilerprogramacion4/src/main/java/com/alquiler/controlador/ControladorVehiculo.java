@@ -46,7 +46,7 @@ public class ControladorVehiculo {
 			   @RequestParam(value = "anno")String anno)throws ParseException  {
 		   vehiculo h = new vehiculo();
 		   if (!imagen.isEmpty() ) {
-			   String ruta = "C:\\Users\\jonat\\Desktop\\imagenes";
+			   String ruta = "C:\\imagenes";//aca cambie la ruta alexis
 					  try {
 						byte[] bytes = imagen.getBytes();
 						Path rutaabsoluta = Paths.get(ruta + "//" + imagen.getOriginalFilename());
@@ -86,7 +86,7 @@ public String crear(@RequestParam(value = "id")int id,@RequestParam(value = "mar
 @RequestParam(value = "imagen")MultipartFile imagen,@RequestParam(value = "costoDiario")Double costoDiario,
 @RequestParam(value = "anno")String anno)throws ParseException  {
 			   vehiculo h = new vehiculo();
-			   String ruta = "C:\\Users\\jonat\\Desktop\\imagenes";
+			   String ruta = "C:\\imagenes";//aca tambien 
 			   try {
 				   byte[] bytes = imagen.getBytes();
 					Path rutaabsoluta = Paths.get(ruta + "//" + imagen.getOriginalFilename());
